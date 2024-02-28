@@ -1,0 +1,22 @@
+server:
+  port: 8088
+
+spring:
+  profiles:
+    active: local
+  application:
+    name: spring-boot-web-upload
+    version: ${SPRING_APPLICATION_VERSION:v1.00.01}
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1MB
+      max-request-size: 2MB
+      resolve-lazily: true
+
+logging:
+  level:
+    root: info
